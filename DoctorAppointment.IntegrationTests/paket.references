@@ -1,0 +1,11 @@
+Newtonsoft.Json redirects: force 
+xunit
+xunit.extensibility.core redirects: force 
+AutoFixture
+AutoFixture.Xunit2
+Simple.Data.SqlServer
+Microsoft.Owin redirects: force 
+Microsoft.Owin.Testing
+Microsoft.AspNet.Cors
+Microsoft.AspNet.WebApi.Owin
+FluentAssertions

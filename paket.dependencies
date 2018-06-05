@@ -1,0 +1,24 @@
+source https://api.nuget.org/v3/index.json
+framework >= net45
+
+nuget FAKE
+nuget Newtonsoft.Json
+nuget Owin
+nuget Microsoft.Owin 3.0.1
+nuget Microsoft.Owin.Cors
+nuget Microsoft.Owin.Hosting
+nuget Microsoft.Owin.Testing
+nuget Microsoft.AspNet.WebApi.Core
+nuget Microsoft.AspNet.WebApi.Owin
+nuget Microsoft.AspNet.Cors 5.0.0
+nuget FluentMigrator
+nuget FluentMigrator.Runner
+nuget Simple.Data.SqlServer
+nuget Dapper
+nuget xunit 2.1.0
+nuget xunit.extensibility.core
+nuget xunit.runner.console
+nuget AutoFixture 3.48.0
+nuget AutoFixture.Xunit2 3.48.0
+nuget FluentAssertions
+nuget Log4Net

@@ -1,0 +1,6 @@
+Owin
+Microsoft.Owin.Cors
+Microsoft.AspNet.Cors
+Microsoft.AspNet.WebApi.Core
+Microsoft.AspNet.WebApi.Owin
+Dapper
