@@ -48,6 +48,8 @@
     <Compile Include="Commands\CommandResult.cs" />
     <Compile Include="Commands\CommandType.cs" />
     <Compile Include="Entities\Appointment.cs" />
+    <Compile Include="Entities\Doctor.cs" />
+    <Compile Include="Entities\Room.cs" />
     <Compile Include="MigrationsRunner.cs" />
     <Compile Include="Mig_201707141119_InitialSchema.cs" />
     <Compile Include="Models\AppointmentsRequest.cs" />
@@ -59,6 +61,10 @@
     <Compile Include="Repositories\Appointment\Interfaces\IAppointmentWriteRepository.cs" />
     <Compile Include="Repositories\Base\Repository.cs" />
     <Compile Include="Repositories\Base\Interfaces\IRepository.cs" />
+    <Compile Include="Repositories\Doctor\DoctorReadRepository.cs" />
+    <Compile Include="Repositories\Doctor\Interfaces\IDoctorReadRepository.cs" />
+    <Compile Include="Repositories\Room\Interfaces\IRoomReadRepository.cs" />
+    <Compile Include="Repositories\Room\RoomReadRepository.cs" />
     <Compile Include="Tables.cs" />
   </ItemGroup>
   <ItemGroup>

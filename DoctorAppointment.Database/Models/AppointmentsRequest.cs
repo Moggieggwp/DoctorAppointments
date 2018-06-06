@@ -9,5 +9,7 @@ namespace DoctorAppointment.Database.Models
     {
         public DateTimeOffset Time { get; set; }
         public decimal Duration { get; set; }
+        public string DoctorName { get; set; }
+        public int RoomNumber { get; set; }
     }
 }

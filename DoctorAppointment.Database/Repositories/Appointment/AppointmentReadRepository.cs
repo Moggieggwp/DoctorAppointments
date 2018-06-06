@@ -40,5 +40,10 @@ namespace DoctorAppointment.Database.Repositories
 
             return result.Data.ToList();
         }
+
+        public Entities.Appointment GetAppointmentById(int id)
+        {
+            return this.GetById(id, Tables.Appointments);
+        }
     }
 }

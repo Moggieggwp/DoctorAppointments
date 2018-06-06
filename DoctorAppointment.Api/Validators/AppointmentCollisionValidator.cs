@@ -26,7 +26,7 @@ namespace DoctorAppointment.Api.Validators
 
             if (CheckIfDoctorHasAppointmentForCurrentTime(appointment, appointments))
             {
-                validationErrors.Add(new ValidationError("Collision"));
+                validationErrors.Add(new ValidationError("Doctor has appointment for current time"));
             }
 
             return validationErrors;

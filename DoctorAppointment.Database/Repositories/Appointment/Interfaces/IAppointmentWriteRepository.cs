@@ -4,7 +4,7 @@ namespace DoctorAppointment.Database.Repositories.Appointment.Interfaces
 {
     public interface IAppointmentWriteRepository
     {
-        Entities.Appointment AddAndReturnAppointment(string doctorName, AppointmentRequest appRequest);
-
+        Entities.Appointment AddAndReturnAppointment(Entities.Appointment appointment);
+        Entities.Appointment UpdateAndReturnAppointment(Entities.Appointment appointment);
     }
 }

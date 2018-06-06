@@ -4,6 +4,9 @@ using System.Configuration;
 using System.Net.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.Dispatcher;
+using DoctorAppointment.Api.CommandRepository;
+using DoctorAppointment.Api.Commands.Appointment;
+using DoctorAppointment.Api.Decorators.Appointments;
 using DoctorAppointment.Api.Services;
 using DoctorAppointment.Api.Validators;
 using DoctorAppointment.Api.Validators.Interfaces;
@@ -11,6 +14,7 @@ using DoctorAppointment.Database.Models;
 using DoctorAppointment.Database.Repositories;
 using DoctorAppointment.Database.Repositories.Appointment;
 using DoctorAppointment.Database.Repositories.Appointment.Interfaces;
+using DoctorAppointment.Database.Repositories.Room.Interfaces;
 
 namespace DoctorAppointment.Api
 {
@@ -29,10 +33,8 @@ namespace DoctorAppointment.Api
             }
 
             if (controllerType == typeof(AppointmentsController))
-            {   
-                //TODO: create and pass any dependencies to controller constructor here
-                return new AppointmentsController(
-                    new AppointmentService(
+            {
+                var appointmentService = new AppointmentService(
                         new AppointmentReadRepository(connectionString),
                         new AppointmentWriteRepository(connectionString),
                         new AppointmentValidator<AppointmentModel>(
@@ -40,8 +42,18 @@ namespace DoctorAppointment.Api
                             {
                                 new AppointmentRequiredFieldsValidator(),
                                 new AppointmentTimeRangeValidator(),
-                                new AppointmentCollisionValidator(new AppointmentReadRepository(connectionString))
-                            })));
+                                new AppointmentCollisionValidator(new AppointmentReadRepository(connectionString)),
+                                new AppointmentRoomAvailableValidator(new AppointmentReadRepository(connectionString))
+                            }),
+                        new RoomReadRepository(connectionString));
+
+                //TODO: create and pass any dependencies to controller constructor here
+                return new AppointmentsController(
+                    appointmentService,
+                    new AppointmentDecorator(
+                        new AppointmentCommandRepository(
+                            new AddAppointmentCommand(appointmentService),
+                            new UpdateAppointmentCommand(appointmentService))));
             }
 
             throw new NotSupportedException(string.Format("Controller type {0} not supported", controllerType.FullName));

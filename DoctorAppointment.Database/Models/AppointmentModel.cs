@@ -8,9 +8,10 @@ namespace DoctorAppointment.Database.Models
     /// </summary>
     public class AppointmentModel
     {
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         public string Doctor { get; set; }
         public DateTimeOffset Time { get; set; }
         public decimal Duration { get; set; }
+        public int RoomNumber { get; set; }
     }
 }

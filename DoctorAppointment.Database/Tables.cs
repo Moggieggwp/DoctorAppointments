@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DoctorAppointment.Database
+﻿namespace DoctorAppointment.Database
 {
     public static class Tables
     {
@@ -13,6 +7,21 @@ namespace DoctorAppointment.Database
             get
             {
                 return "Appointments";
+            }
+        }
+
+        public static string Doctors
+        {
+            get
+            {
+                return "Doctors";
+            }
+        }
+        public static string Rooms
+        {
+            get
+            {
+                return "Rooms";
             }
         }
     }

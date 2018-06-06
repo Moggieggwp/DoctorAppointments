@@ -60,9 +60,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CommandRepository\AppointmentCommandRepository.cs" />
+    <Compile Include="CommandRepository\Appointment\Interfaces\IAppointmentCommandRepository.cs" />
+    <Compile Include="Commands\Appointment\AddAppointmentCommand.cs" />
+    <Compile Include="Commands\Appointment\UpdateAppointmentCommand.cs" />
+    <Compile Include="Commands\Interfaces\ICommand.cs" />
     <Compile Include="Controllers\AppointmentsController.cs" />
     <Compile Include="CompositionRoot.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Decorators\Appointments\AppointmentDecorator.cs" />
+    <Compile Include="Decorators\Appointments\Interfaces\IAppointmentDecorator.cs" />
+    <Compile Include="Decorators\BaseDecorator.cs" />
+    <Compile Include="Decorators\IBaseDecorator.cs" />
     <Compile Include="OwinStartup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AppointmentMapper.cs" />
@@ -70,6 +79,7 @@
     <Compile Include="Services\Interfaces\IAppointmentService.cs" />
     <Compile Include="Validators\AppointmentCollisionValidator.cs" />
     <Compile Include="Validators\AppointmentRequiredFieldsValidator.cs" />
+    <Compile Include="Validators\AppointmentRoomAvailableValidator.cs" />
     <Compile Include="Validators\AppointmentTimeRangeValidator.cs" />
     <Compile Include="Validators\AppointmentValidator.cs" />
     <Compile Include="Validators\Interfaces\IAppointmentValidator.cs" />
@@ -88,6 +98,7 @@
       <Name>DoctorAppointment.Database</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

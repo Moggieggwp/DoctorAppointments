@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using Dapper;
@@ -36,6 +35,7 @@ namespace DoctorAppointment.Database.Repositories.Base
                             };
                         }
                     case CommandType.Insert:
+                    case CommandType.Update:
                         {
                             connection.Execute(command.Query, command.Parametrs);
                             return new CommandResult<T>
@@ -61,7 +61,7 @@ namespace DoctorAppointment.Database.Repositories.Base
             return result.Data.ToList();
         }
 
-        public T GetById(Guid id, string tableName)
+        public T GetById(int id, string tableName)
         {
             var result = this.ExecuteCommand(new Command
             {
