@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using DoctorAppointment.Database.Repositories.Base;
+﻿using DoctorAppointment.Database.Repositories.Base;
 using DoctorAppointment.Database.Repositories.Room.Interfaces;
 
 namespace DoctorAppointment.Database.Repositories
@@ -12,11 +10,6 @@ namespace DoctorAppointment.Database.Repositories
         public RoomReadRepository(string connectionString) : base(connectionString)
         {
             this.connectionString = connectionString;
-        }
-
-        public List<Entities.Room> GetAvailableRooms()
-        {
-            throw new NotImplementedException();
         }
 
         public Entities.Room GetRoomById(int id)

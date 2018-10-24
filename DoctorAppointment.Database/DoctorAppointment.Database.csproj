@@ -52,8 +52,6 @@
     <Compile Include="Entities\Room.cs" />
     <Compile Include="MigrationsRunner.cs" />
     <Compile Include="Mig_201707141119_InitialSchema.cs" />
-    <Compile Include="Models\AppointmentsRequest.cs" />
-    <Compile Include="Models\AppointmentModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\Appointment\AppointmentReadRepository.cs" />
     <Compile Include="Repositories\Appointment\AppointmentWriteRepository.cs" />
@@ -62,9 +60,13 @@
     <Compile Include="Repositories\Base\Repository.cs" />
     <Compile Include="Repositories\Base\Interfaces\IRepository.cs" />
     <Compile Include="Repositories\Doctor\DoctorReadRepository.cs" />
+    <Compile Include="Repositories\Doctor\DoctorWriteRepository.cs" />
     <Compile Include="Repositories\Doctor\Interfaces\IDoctorReadRepository.cs" />
+    <Compile Include="Repositories\Doctor\Interfaces\IDoctorWriteRepository.cs" />
     <Compile Include="Repositories\Room\Interfaces\IRoomReadRepository.cs" />
+    <Compile Include="Repositories\Room\Interfaces\IRoomWriteRepository.cs" />
     <Compile Include="Repositories\Room\RoomReadRepository.cs" />
+    <Compile Include="Repositories\Room\RoomWriteRepository.cs" />
     <Compile Include="Tables.cs" />
   </ItemGroup>
   <ItemGroup>

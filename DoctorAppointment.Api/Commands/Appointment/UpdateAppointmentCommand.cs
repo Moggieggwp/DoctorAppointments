@@ -1,4 +1,5 @@
 ﻿using DoctorAppointment.Api.Commands.Interfaces;
+using DoctorAppointment.Api.Models;
 using DoctorAppointment.Api.Services.Interfaces;
 using DoctorAppointment.Api.Validators;
 using DoctorAppointment.Database.Models;
@@ -15,7 +16,7 @@ namespace DoctorAppointment.Api.Commands.Appointment
 
         public OperationResult<AppointmentModel> Execute(AppointmentRequest commandData)
         {
-            return this.appointmentService.UpdateAndReturnAppointment(commandData);
+            return this.appointmentService.UpdateAppointment(commandData);
         }
     }
 }

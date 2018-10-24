@@ -15,24 +15,24 @@ namespace DoctorAppointment.Database.Repositories
             this.connectionString = connectionString;
         }
 
-        public Entities.Appointment AddAndReturnAppointment(Entities.Appointment appointment)
+        public Entities.Appointment AddAppointment(Entities.Appointment appointment)
         {
             this.ExecuteCommand(new Command
             {
                 Query = "insert into Appointments (Id, Doctor, Time, Duration, RoomNumber) values (@id, @doctor, @time, @duration, @roomNumber)",
-                Parametrs = new { Id = appointment.Id, Doctor = appointment.Doctor, Time = appointment.Time, Duration = appointment.Duration, RoomNumber = appointment.RoomNumber },
+                Parametrs = new { Id = appointment.Id, Doctor = appointment.DoctorId, Time = appointment.Time, Duration = appointment.Duration, RoomNumber = appointment.RoomId },
                 CommandType = CommandType.Insert
             });
 
             return this.GetById(appointment.Id, Tables.Appointments);
         }
 
-        public Entities.Appointment UpdateAndReturnAppointment(Entities.Appointment appointment)
+        public Entities.Appointment UpdateAppointment(Entities.Appointment appointment)
         {
             this.ExecuteCommand(new Command
             {
                 Query = "update Appointments set Doctor = @doctor, Time = @time, Duration = @duration, RoomNumber = @romnumber where Id = @id)",
-                Parametrs = new { Id = appointment.Id, Doctor = appointment.Doctor, Time = appointment.Time, Duration = appointment.Duration, RoomNumber = appointment.RoomNumber },
+                Parametrs = new { Id = appointment.Id, Doctor = appointment.DoctorId, Time = appointment.Time, Duration = appointment.Duration, RoomNumber = appointment.RoomId },
                 CommandType = CommandType.Update
             });
 

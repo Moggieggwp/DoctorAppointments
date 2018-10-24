@@ -34,6 +34,8 @@ D:\Sigma courses\src\DoctorAppointment\DoctorAppointment.Api\bin\Debug\FluentMig
 D:\Sigma courses\src\DoctorAppointment\.build\DoctorAppointment.Api.dll.config
 D:\Sigma courses\src\DoctorAppointment\DoctorAppointment.Api\bin\Debug\log4net.dll
 D:\Sigma courses\src\DoctorAppointment\DoctorAppointment.Api\bin\Debug\log4net.xml
+C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.Api\obj\Debug\DoctorAppointment.Api.csprojAssemblyReference.cache
+C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.Api\obj\Debug\DoctorAppointment.Api.csproj.CoreCompileInputs.cache
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.Api\bin\Debug\DoctorAppointment.Api.dll.config
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.Api\bin\Debug\DoctorAppointment.Api.dll
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.Api\bin\Debug\DoctorAppointment.Api.pdb
@@ -52,6 +54,7 @@ C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppo
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.Api\bin\Debug\FluentMigrator.dll
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.Api\bin\Debug\FluentMigrator.Runner.dll
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.Api\bin\Debug\DoctorAppointment.Database.pdb
+C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.Api\bin\Debug\DoctorAppointment.Database.dll.config
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.Api\bin\Debug\log4net.xml
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.Api\bin\Debug\Microsoft.Owin.xml
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.Api\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
@@ -64,6 +67,6 @@ C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppo
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.Api\bin\Debug\FluentMigrator.pdb
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.Api\bin\Debug\FluentMigrator.xml
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.Api\bin\Debug\FluentMigrator.Runner.pdb
-C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.Api\obj\Debug\DoctorAppointment.Api.csprojResolveAssemblyReference.cache
+C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.Api\obj\Debug\DoctorAppointment.Api.csproj.CopyComplete
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.Api\obj\Debug\DoctorAppointment.Api.dll
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.Api\obj\Debug\DoctorAppointment.Api.pdb

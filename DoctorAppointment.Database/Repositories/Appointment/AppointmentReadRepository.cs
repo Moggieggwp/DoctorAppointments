@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using DoctorAppointment.Database.Commands;
-using DoctorAppointment.Database.Models;
 using DoctorAppointment.Database.Repositories.Appointment.Interfaces;
 using DoctorAppointment.Database.Repositories.Base;
 
@@ -17,12 +16,12 @@ namespace DoctorAppointment.Database.Repositories
             this.connectionString = connectionString;
         }
 
-        public List<Entities.Appointment> GetAppointmentsByDoctorName(string doctorName)
+        public List<Entities.Appointment> GetAppointmentsByDoctorId(int doctorId)
         {
             CommandResult<Entities.Appointment> result = this.ExecuteCommand(new Command
             {
                 Query = "select * from Appointments where Doctor = @doctor",
-                Parametrs = new { Doctor = doctorName },
+                Parametrs = new { Doctor = doctorId },
                 CommandType = CommandType.Select
             });
 
