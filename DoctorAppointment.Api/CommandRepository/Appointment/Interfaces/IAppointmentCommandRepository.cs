@@ -1,4 +1,5 @@
-﻿using DoctorAppointment.Api.Validators;
+﻿using DoctorAppointment.Api.Models;
+using DoctorAppointment.Api.Validators;
 using DoctorAppointment.Database.Models;
 
 namespace DoctorAppointment.Api.CommandRepository.Interfaces

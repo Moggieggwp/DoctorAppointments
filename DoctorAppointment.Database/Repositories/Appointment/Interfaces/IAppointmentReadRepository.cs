@@ -4,7 +4,7 @@ namespace DoctorAppointment.Database.Repositories.Appointment.Interfaces
 {
     public interface IAppointmentReadRepository
     {
-        List<Entities.Appointment> GetAppointmentsByDoctorName(string doctorName);
+        List<Entities.Appointment> GetAppointmentsByDoctorId(int doctorId);
         List<Entities.Appointment> GetAppointments();
         Entities.Appointment GetAppointmentById(int id);
     }

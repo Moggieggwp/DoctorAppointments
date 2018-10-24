@@ -5,8 +5,10 @@ using DoctorAppointment.Api.Services.Interfaces;
 using DoctorAppointment.Database.Repositories.Appointment.Interfaces;
 using DoctorAppointment.Api.Validators.Interfaces;
 using DoctorAppointment.Api.Validators;
-using System;
 using DoctorAppointment.Database.Repositories.Room.Interfaces;
+using DoctorAppointment.Api.Models;
+using DoctorAppointment.Database.Repositories.Doctor.Interfaces;
+using DoctorAppointment.Database.Entities;
 
 namespace DoctorAppointment.Api.Services
 {
@@ -15,82 +17,101 @@ namespace DoctorAppointment.Api.Services
         private readonly IAppointmentReadRepository appointmentReadRepository;
         private readonly IAppointmentWriteRepository appointmentWriteRepository;
         private readonly IRoomReadRepository roomReadRepository;
+        private readonly IDoctorReadRepository doctorReadRepository;
         private readonly IValidator<AppointmentModel> appointmentValidator;
+        private readonly IApplicationMappingService applicationMappingService;
 
         public AppointmentService(
             IAppointmentReadRepository appointmentReadRepository,
             IAppointmentWriteRepository appointmentWriteRepository,
             IValidator<AppointmentModel> appointmentValidator,
-            IRoomReadRepository roomReadRepository)
+            IRoomReadRepository roomReadRepository,
+            IDoctorReadRepository doctorReadRepository,
+            IApplicationMappingService applicationMappingService)
         {
             this.appointmentReadRepository = appointmentReadRepository;
             this.appointmentWriteRepository = appointmentWriteRepository;
             this.appointmentValidator = appointmentValidator;
             this.roomReadRepository = roomReadRepository;
+            this.doctorReadRepository = doctorReadRepository;
+            this.applicationMappingService = applicationMappingService;
         }
 
-        public List<AppointmentModel> GetAppointmentsByDoctorName(string doctorName)
+        public List<AppointmentResponse> GetAppointmentsByDoctorId(int doctorId)
         {
-            var appointments = this.appointmentReadRepository.GetAppointmentsByDoctorName(doctorName);
-            return appointments.Select(AppointmentMapper.MapToModel).ToList();
+            var appintmentsList = new List<AppointmentResponse>();
+            List<Appointment> appointments = this.appointmentReadRepository.GetAppointmentsByDoctorId(doctorId);
+
+            foreach (Appointment appointment in appointments)
+            {
+                Room room = this.roomReadRepository.GetRoomById(appointment.RoomId);
+                Doctor doctor = this.doctorReadRepository.GetDoctorById(appointment.DoctorId);
+
+                appintmentsList.Add(this.applicationMappingService.MergeToAppointmentResponse(appointment, doctor, room));
+            }
+
+            return appintmentsList;
         }
 
-        public OperationResult<AppointmentModel> AddAndReturnAppointment(AppointmentRequest appointmentRequest)
+        public OperationResult<AppointmentModel> AddAppointment(AppointmentRequest appointmentRequest)
         {
             var appointmentModel = new AppointmentModel
             {
-                Doctor = appointmentRequest.DoctorName,
+                DoctorId = appointmentRequest.DoctorId,
                 Duration = appointmentRequest.Duration,
                 Time = appointmentRequest.Time,
-                RoomNumber = appointmentRequest.RoomNumber
+                RoomId = appointmentRequest.RoomId
             };
 
-            var operatingResult = this.appointmentValidator.Validate(appointmentModel);
+            OperationResult<AppointmentModel> operatingResult = this.appointmentValidator.Validate(appointmentModel);
 
             if (operatingResult.IsValid)
             {
                 appointmentModel.Id = this.GetIdForAppointment();
 
-                var appointment = this.appointmentWriteRepository.AddAndReturnAppointment(AppointmentMapper.MapToEntity(appointmentModel));
-                operatingResult.Response = AppointmentMapper.MapToModel(appointment);
+                Appointment appointment = this.appointmentWriteRepository.AddAppointment(this.applicationMappingService.MapToAppointmentEntity(appointmentModel));
+                operatingResult.Response = this.applicationMappingService.MapToAppointmentModel(appointment);
             }
 
             return operatingResult;
         }
 
-        public OperationResult<AppointmentModel> UpdateAndReturnAppointment(AppointmentRequest appointmentRequest)
+        public OperationResult<AppointmentModel> UpdateAppointment(AppointmentRequest appointmentRequest)
         {
             var appointmentModel = new AppointmentModel
             {
-                Doctor = appointmentRequest.DoctorName,
+                DoctorId = appointmentRequest.DoctorId,
                 Duration = appointmentRequest.Duration,
                 Time = appointmentRequest.Time,
-                RoomNumber = appointmentRequest.RoomNumber
+                RoomId = appointmentRequest.RoomId
             };
 
-            var operatingResult = this.appointmentValidator.Validate(appointmentModel);
+            OperationResult<AppointmentModel> operatingResult = this.appointmentValidator.Validate(appointmentModel);
 
             if (operatingResult.IsValid)
             {
                 appointmentModel.Id = this.GetIdForAppointment();
 
-                var appointment = this.appointmentWriteRepository.UpdateAndReturnAppointment(AppointmentMapper.MapToEntity(appointmentModel));
-                operatingResult.Response = AppointmentMapper.MapToModel(appointment);
+                Appointment appointment = this.appointmentWriteRepository.UpdateAppointment(this.applicationMappingService.MapToAppointmentEntity(appointmentModel));
+                operatingResult.Response = this.applicationMappingService.MapToAppointmentModel(appointment);
             }
 
             return operatingResult;
         }
 
-        public AppointmentModel GetAppointmentById(int id)
+        public AppointmentResponse GetAppointmentById(int id)
         {
-            var appointment = this.appointmentReadRepository.GetAppointmentById(id);
-            return AppointmentMapper.MapToModel(appointment);
+            Appointment appointment = this.appointmentReadRepository.GetAppointmentById(id);
+            Room room = this.roomReadRepository.GetRoomById(appointment.RoomId);
+            Doctor doctor = this.doctorReadRepository.GetDoctorById(appointment.DoctorId);
+
+            return this.applicationMappingService.MergeToAppointmentResponse(appointment, doctor, room);
         }
 
         private int GetIdForAppointment()
         {
-            var appointments = this.appointmentReadRepository.GetAppointments();
-            var appointment = appointments.OrderByDescending(c => c.Id).First();
+            List<Appointment> appointments = this.appointmentReadRepository.GetAppointments();
+            Appointment appointment = appointments.OrderByDescending(c => c.Id).First();
 
             return appointment.Id++;
         }

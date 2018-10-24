@@ -71,11 +71,13 @@ D:\Sigma courses\src\DoctorAppointment\.build\xunit.runner.visualstudio.testadap
 D:\Sigma courses\src\DoctorAppointment\.build\xunit.runner.reporters.net452.dll
 D:\Sigma courses\src\DoctorAppointment\DoctorAppointment.IntegrationTests\bin\Debug\log4net.dll
 D:\Sigma courses\src\DoctorAppointment\DoctorAppointment.IntegrationTests\bin\Debug\log4net.xml
-C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.IntegrationTests\bin\Debug\xunit.runner.visualstudio.testadapter.dll
+C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.IntegrationTests\obj\Debug\DoctorAppointment.IntegrationTests.csprojAssemblyReference.cache
+C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.IntegrationTests\obj\Debug\DoctorAppointment.IntegrationTests.csproj.CoreCompileInputs.cache
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.IntegrationTests\bin\Debug\xunit.runner.utility.net35.dll
-C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.IntegrationTests\bin\Debug\xunit.runner.reporters.net452.dll
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.IntegrationTests\bin\Debug\xunit.abstractions.dll
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.IntegrationTests\bin\Debug\xunit.execution.desktop.dll
+C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.IntegrationTests\bin\Debug\xunit.runner.visualstudio.testadapter.dll
+C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.IntegrationTests\bin\Debug\xunit.runner.reporters.net452.dll
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.IntegrationTests\bin\Debug\HospitalDatabase.mdf
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.IntegrationTests\bin\Debug\HospitalDatabase_log.ldf
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.IntegrationTests\bin\Debug\DoctorAppointment.IntegrationTests.dll.config
@@ -107,7 +109,9 @@ C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppo
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.IntegrationTests\bin\Debug\FluentMigrator.Runner.dll
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.IntegrationTests\bin\Debug\Dapper.dll
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.IntegrationTests\bin\Debug\DoctorAppointment.Api.pdb
+C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.IntegrationTests\bin\Debug\DoctorAppointment.Api.dll.config
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.IntegrationTests\bin\Debug\DoctorAppointment.Database.pdb
+C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.IntegrationTests\bin\Debug\DoctorAppointment.Database.dll.config
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.IntegrationTests\bin\Debug\Ploeh.AutoFixture.xml
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.IntegrationTests\bin\Debug\Ploeh.AutoFixture.Xunit2.xml
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.IntegrationTests\bin\Debug\FluentAssertions.pdb
@@ -131,6 +135,6 @@ C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppo
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.IntegrationTests\bin\Debug\FluentMigrator.xml
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.IntegrationTests\bin\Debug\FluentMigrator.Runner.pdb
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.IntegrationTests\bin\Debug\Dapper.xml
-C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.IntegrationTests\obj\Debug\DoctorAppointment.IntegrationTests.csprojResolveAssemblyReference.cache
+C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.IntegrationTests\obj\Debug\DoctorAppointment.IntegrationTests.csproj.CopyComplete
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.IntegrationTests\obj\Debug\DoctorAppointment.IntegrationTests.dll
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.IntegrationTests\obj\Debug\DoctorAppointment.IntegrationTests.pdb

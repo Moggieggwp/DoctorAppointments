@@ -24,6 +24,8 @@ C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppo
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.Database\bin\Debug\FluentMigrator.pdb
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.Database\bin\Debug\FluentMigrator.xml
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.Database\bin\Debug\FluentMigrator.Runner.pdb
-C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.Database\obj\Debug\DoctorAppointment.Database.csprojResolveAssemblyReference.cache
+C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.Database\obj\Debug\DoctorAppointment.Database.csproj.CoreCompileInputs.cache
+C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.Database\obj\Debug\DoctorAppointment.Database.csproj.CopyComplete
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.Database\obj\Debug\DoctorAppointment.Database.dll
 C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.Database\obj\Debug\DoctorAppointment.Database.pdb
+C:\Users\Dmitriy.Grigoryev\Documents\New folder\src\DoctorAppointment\DoctorAppointment.Database\obj\Debug\DoctorAppointment.Database.csprojAssemblyReference.cache
