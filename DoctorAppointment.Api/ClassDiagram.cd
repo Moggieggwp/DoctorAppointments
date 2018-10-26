@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DoctorAppointment.Api.AppointmentsController">
+    <Position X="6" Y="2" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAAAAQAAAAAAAAAAAAAAAAAEABAAgAAAIAAAA=</HashCode>
+      <FileName>Controllers\AppointmentsController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="appointmentDecorator" />
+      <Field Name="appointmentService" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DoctorAppointment.Api.CommandRepository.AppointmentCommandRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.75" Y="17.75" Width="2.75" />
+    <AssociationLine Name="addAppointmentCommand" Type="DoctorAppointment.Api.Commands.Interfaces.ICommand&lt;TIn, TOut&gt;">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="1.937" Y="2.726" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="updateAppointmentCommand" Type="DoctorAppointment.Api.Commands.Interfaces.ICommand&lt;TIn, TOut&gt;" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.406" Y="18.312" />
+        <Point X="7.406" Y="18.687" />
+        <Point X="5.562" Y="18.687" />
+        <Point X="5.562" Y="21.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.915" Y="0.258" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAGAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>CommandRepository\Appointment\AppointmentCommandRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="addAppointmentCommand" />
+      <Field Name="updateAppointmentCommand" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DoctorAppointment.Api.CommandRepository.Doctor.DoctorCommandRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="1.25" Y="17.75" Width="2.25" />
+    <AssociationLine Name="addDoctorCommand" Type="DoctorAppointment.Api.Commands.Interfaces.ICommand&lt;TIn, TOut&gt;" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.75" Y="18.312" />
+        <Point X="1.75" Y="21.563" />
+        <Point X="3.5" Y="21.563" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.982" Y="2.513" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="updateDoctorCommand" Type="DoctorAppointment.Api.Commands.Interfaces.ICommand&lt;TIn, TOut&gt;" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="3.062" Y="18.312" />
+        <Point X="3.062" Y="20.875" />
+        <Point X="3.875" Y="20.875" />
+        <Point X="3.875" Y="21.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.022" Y="0.29" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAYABAAAAAA=</HashCode>
+      <FileName>CommandRepository\Doctor\DoctorCommandRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="addDoctorCommand" />
+      <Field Name="updateDoctorCommand" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DoctorAppointment.Api.CommandRepository.Room.RoomCommandRepository" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="17.75" Width="2.25" />
+    <AssociationLine Name="addRoomCommand" Type="DoctorAppointment.Api.Commands.Interfaces.ICommand&lt;TIn, TOut&gt;" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="5.25" Y="18.312" />
+        <Point X="5.25" Y="21.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.582" Y="1.772" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="updateRoomCommand" Type="DoctorAppointment.Api.Commands.Interfaces.ICommand&lt;TIn, TOut&gt;" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="4.5" Y="18.312" />
+        <Point X="4.5" Y="21.25" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.763" Y="2.118" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ABAAgAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommandRepository\Room\RoomCommandRepository.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="addRoomCommand" />
+      <Field Name="updateRoomCommand" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DoctorAppointment.Api.Commands.Appointment.AddAppointmentCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="6.25" Width="2.25" />
+    <AssociationLine Name="appointmentService" Type="DoctorAppointment.Api.Services.Interfaces.IAppointmentService" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="1.625" Y="6.25" />
+        <Point X="1.625" Y="4.781" />
+        <Point X="3" Y="4.781" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Commands\Appointment\AddAppointmentCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="appointmentService" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DoctorAppointment.Api.Commands.Appointment.UpdateAppointmentCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="6.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Commands\Appointment\UpdateAppointmentCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="appointmentService" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DoctorAppointment.Api.Commands.Doctor.AddDoctorCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7" Y="6.25" Width="2" />
+    <AssociationLine Name="doctorService" Type="DoctorAppointment.Api.Services.Interfaces.IDoctorService" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.917" Y="6.25" />
+        <Point X="7.917" Y="4.688" />
+        <Point X="8.75" Y="4.688" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\Doctor\AddDoctorCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="doctorService" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DoctorAppointment.Api.Commands.Doctor.UpdateDoctorCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\Doctor\UpdateDoctorCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="doctorService" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DoctorAppointment.Api.Commands.Room.AddRoomCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="12.75" Y="6.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\Room\AddRoomCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="roomService" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DoctorAppointment.Api.Commands.Room.UpdateRoomCommand" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="6.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\Room\UpdateRoomCommand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="roomService" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DoctorAppointment.Api.Controllers.BaseController" Collapsed="true">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Controllers\BaseController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DoctorAppointment.Api.Controllers.DoctorController">
+    <Position X="11.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACACAAAEAAAAAAAAAAAAAAAACAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Controllers\DoctorController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="doctorDecorator" />
+      <Field Name="doctorService" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DoctorAppointment.Api.Controllers.RoomController">
+    <Position X="17.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAACAAAAACAAAAAIAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controllers\RoomController.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="roomDecorator" />
+      <Field Name="roomService" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="DoctorAppointment.Api.Decorators.Appointments.AppointmentDecorator">
+    <Position X="11.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAgAAAAAAAA=</HashCode>
+      <FileName>Decorators\Appointments\AppointmentDecorator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="appointmentCommandRepository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DoctorAppointment.Api.Decorators.BaseDecorator" Collapsed="true">
+    <Position X="11.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Decorators\BaseDecorator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Logger" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DoctorAppointment.Api.Decorators.Doctors.DoctorDecorator">
+    <Position X="18.75" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAACAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Decorators\Doctors\DoctorDecorator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="doctorCommandRepository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DoctorAppointment.Api.Decorators.Rooms.RoomDecorator">
+    <Position X="4" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABIAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Decorators\Rooms\RoomDecorator.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="roomCommandRepository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DoctorAppointment.Api.Services.AppointmentService" BaseTypeListCollapsed="true">
+    <Position X="9" Y="14" Width="2" />
+    <AssociationLine Name="roomReadRepository" Type="DoctorAppointment.Database.Repositories.Room.Interfaces.IRoomReadRepository" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="10.188" Y="14" />
+        <Point X="10.188" Y="13.75" />
+        <Point X="19.625" Y="13.75" />
+        <Point X="19.625" Y="14.812" />
+        <Point X="20" Y="14.812" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>CAAAAAABAAAQAAAAAAAAAABAAAAAAEADAAgAAAAIIAg=</HashCode>
+      <FileName>Services\AppointmentService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="applicationMappingService" />
+      <Field Name="appointmentReadRepository" />
+      <Field Name="appointmentValidator" />
+      <Field Name="appointmentWriteRepository" />
+      <Field Name="doctorReadRepository" />
+      <Field Name="roomReadRepository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DoctorAppointment.Api.Services.DoctorService" BaseTypeListCollapsed="true">
+    <Position X="16.5" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACCAAABAAAAAAAAAAAAAABQAACAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Services\DoctorService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="applicationMappingService" />
+      <Field Name="doctorReadRepository" />
+      <Field Name="doctorValidator" />
+      <Field Name="doctorWriteRepository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DoctorAppointment.Api.Services.RoomService" BaseTypeListCollapsed="true">
+    <Position X="23" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAABACAAAAIAAJAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Services\RoomService.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="applicationMappingService" />
+      <Field Name="roomReadRepository" />
+      <Field Name="roomValidator" />
+      <Field Name="roomWriteRepository" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DoctorAppointment.Database.Repositories.AppointmentReadRepository" Collapsed="true">
+    <Position X="11.25" Y="22.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DoctorAppointment.Database.Repositories.AppointmentWriteRepository" Collapsed="true">
+    <Position X="13.5" Y="22.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DoctorAppointment.Database.Repositories.RoomReadRepository" Collapsed="true">
+    <Position X="18" Y="22.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DoctorAppointment.Database.Repositories.Base.BaseRepository&lt;T&gt;" Collapsed="true">
+    <Position X="16.75" Y="21.25" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DoctorAppointment.Database.Repositories.Doctor.DoctorReadRepository" Collapsed="true">
+    <Position X="15.75" Y="22.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DoctorAppointment.Database.Repositories.Doctor.DoctorWriteRepository" Collapsed="true">
+    <Position X="20.25" Y="22.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DoctorAppointment.Database.Repositories.Room.RoomWriteRepository" Collapsed="true">
+    <Position X="22.5" Y="22.5" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="DoctorAppointment.Api.CommandRepository.Interfaces.IAppointmentCommandRepository" Collapsed="true">
+    <Position X="6.5" Y="12" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>CommandRepository\Appointment\Interfaces\IAppointmentCommandRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DoctorAppointment.Api.CommandRepository.Doctor.Interfaces.IDoctorCommandRepository" Collapsed="true">
+    <Position X="13.75" Y="12" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>CommandRepository\Doctor\Interfaces\IDoctorCommandRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DoctorAppointment.Api.CommandRepository.Room.Interfaces.IRoomCommandRepository" Collapsed="true">
+    <Position X="0.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CommandRepository\Room\Interfaces\IRoomCommandRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DoctorAppointment.Api.Commands.Interfaces.ICommand&lt;TIn, TOut&gt;" Collapsed="true">
+    <Position X="3.5" Y="21.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Commands\Interfaces\ICommand.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DoctorAppointment.Api.Decorators.Interfaces.IAppointmentDecorator" Collapsed="true">
+    <Position X="5.5" Y="4.5" Width="2" />
+    <InheritanceLine Type="DoctorAppointment.Api.Decorators.IBaseDecorator" ManuallyRouted="true">
+      <Path>
+        <Point X="12.5" Y="8.75" />
+        <Point X="12.5" Y="7.649" />
+        <Point X="6.5" Y="7.649" />
+        <Point X="6.5" Y="5.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAgAAAAAAAA=</HashCode>
+      <FileName>Decorators\Appointments\Interfaces\IAppointmentDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DoctorAppointment.Api.Decorators.IBaseDecorator" Collapsed="true">
+    <Position X="11.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Decorators\IBaseDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DoctorAppointment.Api.Decorators.Doctors.Interfaces.IDoctorDecorator" Collapsed="true">
+    <Position X="11.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Decorators\Doctors\Interfaces\IDoctorDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DoctorAppointment.Api.Decorators.Rooms.Interfaces.IRoomDecorator" Collapsed="true">
+    <Position X="17.25" Y="4.5" Width="1.5" />
+    <InheritanceLine Type="DoctorAppointment.Api.Decorators.IBaseDecorator" ManuallyRouted="true">
+      <Path>
+        <Point X="12.5" Y="8.75" />
+        <Point X="12.5" Y="7.633" />
+        <Point X="18" Y="7.633" />
+        <Point X="18" Y="5.191" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Decorators\Rooms\Interfaces\IRoomDecorator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DoctorAppointment.Api.Services.Interfaces.IApplicationMappingService" Collapsed="true">
+    <Position X="15" Y="19.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgEAAAAAAAAABAAAAAAAAQAACAAACAAAAAAAIAA=</HashCode>
+      <FileName>Services\Interfaces\IApplicationMappingService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DoctorAppointment.Api.Services.Interfaces.IAppointmentService" Collapsed="true">
+    <Position X="3" Y="4.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAAAAAAAAAAEABAAgAAAAAAAA=</HashCode>
+      <FileName>Services\Interfaces\IAppointmentService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DoctorAppointment.Api.Services.Interfaces.IDoctorService" Collapsed="true">
+    <Position X="8.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Services\Interfaces\IDoctorService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DoctorAppointment.Api.Services.Interfaces.IRoomService" Collapsed="true">
+    <Position X="14.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAACAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\Interfaces\IRoomService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DoctorAppointment.Api.Validators.Interfaces.IValidator&lt;TModel&gt;" Collapsed="true">
+    <Position X="15" Y="18.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Validators\Interfaces\IValidator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="log4net.ILog" Collapsed="true">
+    <Position X="14.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="DoctorAppointment.Database.Repositories.Appointment.Interfaces.IAppointmentReadRepository" Collapsed="true">
+    <Position X="4.5" Y="15.5" Width="2.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="DoctorAppointment.Database.Repositories.Appointment.Interfaces.IAppointmentWriteRepository" Collapsed="true">
+    <Position X="4.5" Y="14.5" Width="2.25" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="DoctorAppointment.Database.Repositories.Doctor.Interfaces.IDoctorReadRepository" Collapsed="true">
+    <Position X="12.75" Y="14.25" Width="2" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="DoctorAppointment.Database.Repositories.Doctor.Interfaces.IDoctorWriteRepository" Collapsed="true">
+    <Position X="13.25" Y="15.25" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="DoctorAppointment.Database.Repositories.Room.Interfaces.IRoomReadRepository" Collapsed="true">
+    <Position X="20" Y="14.5" Width="2" />
+    <TypeIdentifier />
+  </Interface>
+  <Interface Name="DoctorAppointment.Database.Repositories.Room.Interfaces.IRoomWriteRepository" Collapsed="true">
+    <Position X="20.25" Y="15.75" Width="1.5" />
+    <TypeIdentifier />
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
