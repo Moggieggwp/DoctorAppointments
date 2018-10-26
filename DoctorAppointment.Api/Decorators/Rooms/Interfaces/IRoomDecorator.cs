@@ -3,7 +3,7 @@ using DoctorAppointment.Api.Validators;
 
 namespace DoctorAppointment.Api.Decorators.Rooms.Interfaces
 {
-    public interface IRoomDecorator
+    public interface IRoomDecorator : IBaseDecorator
     {
         OperationResult<RoomModel> AddRoom(RoomRequest commandData);
         OperationResult<RoomModel> UpdateRoom(RoomRequest commandData);
